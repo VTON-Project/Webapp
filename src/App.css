@@ -1,0 +1,22 @@
+.cont
+{
+  text-align:center;
+}
+.box
+{
+  padding-top:30px;
+  gap:20px;
+  display:flex;
+  align-items:center;
+  justify-content: space-around;
+}
+.main
+{
+  width: 600px;
+  height: 400px;
+  margin:auto;
+  left:50%;
+  margin-top:50px;
+  border: solid 2px black;
+  text-align:center;
+}
