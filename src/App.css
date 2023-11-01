@@ -1,6 +1,10 @@
-.cont
+body
 {
-  text-align:center;
+  background-image: url("https://wallpapers.com/images/high/best-desktop-pc-background-11un3v8kchcfqdv8.webp");
+  background-color: #cccccc;  
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 .box
 {
