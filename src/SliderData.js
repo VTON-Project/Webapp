@@ -1,17 +1,17 @@
-export const SliderData=[
-    {
-        img:'https://raw.githubusercontent.com/benquick123/C-VTON/main/img/banner.png'
-    },
-    {
-        img:'https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-021-99406-6/MediaObjects/41598_2021_99406_Fig1_HTML.png'
-    },
-    {
-        img:'https://www.mdpi.com/sensors/sensors-20-05647/article_deploy/html/images/sensors-20-05647-g001.png'
-    },
-    {
-        img:'https://psh01087.github.io/VITON-HD/figs/model_overview.png'
-    },
-    {
-        img:'https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs11042-019-08363-w/MediaObjects/11042_2019_8363_Fig2_HTML.png'
-    }
-]
+export const SliderData = [
+  {
+    img: "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/UNREC/8th/v1/3000_unrec._CB596352848_.jpg",
+  },
+  {
+    img: "https://images-eu.ssl-images-amazon.com/images/G/31/img20/HSS/sep23/3000-x-1200-UNREC_2._CB595936287_.jpg",
+  },
+  {
+    img: "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Toys/GW/GW-Hero-PC_BBAug23_Soft-toys_with-Apay_Lifestyle_2x._CB597740150_.jpg",
+  },
+  {
+    img: "https://images-eu.ssl-images-amazon.com/images/G/31/img21/Wireless/Shreyansh/BAU/Unrexc/D70978891_INWLD_BAU_Unrec_Uber_PC_Hero_3000x1200._CB594707876_.jpg",
+  },
+  {
+    img: "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/Skincare-PCaa._CB595887158_.jpg",
+  },
+];

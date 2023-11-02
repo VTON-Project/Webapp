@@ -18,16 +18,16 @@ function Header() {
             <a href="/home">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="/about">About</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/team">Team Members</a>
           </li>
         </ul>
         <div class="nav-header">
           <div class="nav-title">
-            <Link style={{ textDecoration: 'none' }}to="/vton">
-              <p className="text">VITON</p>
+            <Link style={{ textDecoration: "none" }} to="/vton">
+              <p className="text">VTON</p>
             </Link>
           </div>
         </div>

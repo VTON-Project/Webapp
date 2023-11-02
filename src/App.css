@@ -1,26 +1,22 @@
-body
-{
-  background-image: url("https://wallpapers.com/images/high/best-desktop-pc-background-11un3v8kchcfqdv8.webp");
-  background-color: #cccccc;  
+body {
+  background-image: url("https://cdn.wallpapersafari.com/97/50/eRwDMy.jpg");
+  background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
-.box
-{
-  padding-top:30px;
-  gap:20px;
-  display:flex;
-  align-items:center;
+.box {
+  padding-top: 30px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
   justify-content: space-around;
 }
-.main
-{
+.main {
   width: 600px;
   height: 400px;
-  margin:auto;
-  left:50%;
-  margin-top:50px;
+  margin: auto;
+  left: 50%;
+  margin-top: 50px;
   border: solid 2px black;
-  text-align:center;
+  text-align: center;
 }

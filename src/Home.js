@@ -16,18 +16,13 @@ const bull = (
 );
 function Home() {
   return (
-    <div style={{ margin: "0 10%" ,padding:"5% 0"}}>
+    <div style={{ margin: "0 10%", padding: "5% 0" }}>
       <Card sx={{ maxWidth: 1200 }}>
         <CardContent>
           <Typography variant="h3" gutterBottom>
-            A Simple Material UI Card
+            Virtual Try-On Network
           </Typography>
-          <Typography variant="h4" component="div">
-            Heading
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            describes the heading
-          </Typography>
+
           <Typography variant="body1">
             The evolution of Virtual Try-On (VTO) technology has been a
             collaborative endeavor with numerous researchers contributing
