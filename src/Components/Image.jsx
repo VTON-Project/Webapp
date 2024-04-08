@@ -1,41 +1,63 @@
 import React, { useState } from "react";
-import output1 from "../img/output2.jpg";
 
 function FirstImage() {
-  const [file, setFile] = useState();
-  const [file1, setFile1] = useState();
-  const [show, setShow] = useState(false);
-  const [show1, setShow1] = useState(false);
-  function handleChange(e) {
-    setFile(URL.createObjectURL(e.target.files[0]));
-    setShow(true);
+  const [person, setPerson] = useState(null);
+  const [cloth, setCloth] = useState(null);
+  function handlePersonChange(e) {
+    setPerson(e.target.files[0]);
   }
-  function handleChange1(e) {
-    setFile1(URL.createObjectURL(e.target.files[0]));
-    setShow1(true);
+  function handleClothChange(e) {
+    setCloth(e.target.files[0]);
   }
-  const [image, setImage] = useState(false);
-  const handleSubmit = (e) => {
-    setImage(true);
+
+  const [image, setImage] = useState(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (person === null || cloth === null) {
+      alert("Person and cloth image must be uploaded.");
+      return;
+    }
+    const formData = new FormData();
+    formData.set('person', person);
+    formData.set('cloth', cloth);
+
+    try {
+      const response = await fetch('http://127.0.0.1:5000', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const imageBlob = await response.blob();
+        const imageURL = URL.createObjectURL(imageBlob);
+        setImage(imageURL);
+      }
+      else {
+        console.error('Failed to upload files.');
+      }
+    } catch (error) {
+      console.error(`Error uploading files: ${error}`);
+    }
   };
+
   return (
     <div className="App">
       {/* <div className="box"> */}
       <div className="main">
-        {!image && (
           <form onSubmit={handleSubmit}>
-            <button type="submit">Result</button>
+            <button type="submit">Generate</button>
           </form>
-        )}
-        {image && show && show1 && (
-          <img src={output1} width={600} height={400} />
+        {image !== null && (
+          <img src={image} height="370" />
         )}
       </div>
       <div className="box">
-        <input type="file" onChange={handleChange} />
-        <img alt="" src={file} width="200" height="200" />
-        <input type="file" onChange={handleChange1} />
-        <img alt="" src={file1} width="200" height="200" />
+        <input type="file" onChange={handlePersonChange} />
+        <img alt="" src={person !== null ? URL.createObjectURL(person) : undefined} width="200" height="200" />
+        <input type="file" onChange={handleClothChange} />
+        <img alt="" src={cloth !== null ? URL.createObjectURL(cloth) : undefined} width="200" height="200" />
       </div>
     </div>
     // </div>
